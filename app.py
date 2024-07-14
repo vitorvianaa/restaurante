@@ -1,17 +1,20 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
-
-picanhaMania = Restaurante('picanha mania', 'almoço')
 pastelMania = Restaurante('pastel mania', 'lanche')
-bobs = Restaurante('Bobs', 'fastfood')
-bobs.alterarStatus()
-
-pastelMania.fazerAvaliacao('Vitor', 4)
-pastelMania.fazerAvaliacao('Maria', 5)
+picanhaMania = Restaurante('picanha mania', 'almoço')
+suco = Bebida('Suco de Goiaba', 10, 'grande')
+tapioca = Prato('Tapioca com Tucumã e Queijo', 15, 'Queijo coalho')
+picanhaMania.adicionarItemCardapio(suco)
+suco.aplicarDesconto()
+picanhaMania.adicionarItemCardapio(tapioca)
+tapioca.aplicarDesconto()
 
 def main():
 
-    Restaurante.listarRestaurantes()
+    picanhaMania.lisarCardapio
+    pastelMania.lisarCardapio
 
 if __name__ == '__main__':
     main()
